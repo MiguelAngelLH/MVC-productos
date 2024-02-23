@@ -1,0 +1,7 @@
+id,nombre,descripcion,precio,existencia
+1,Laptop,"Laptop de ultima generacion",999.99,10
+2,Smartphone,"Smartphone con camara de alta resolucion",599.99,20
+3,Tablet,"Tablet ligera y portatil",299.99,15
+4,Auriculares,"Auriculares inalambricos con cancelacion de ruido",99.99,50
+5,Monitor,"Monitor de alta definicion de 27 pulgadas",299.99,50
+6,Monitor,"Monitores de alta definicion de 27 pulgadas",299.99,50
