@@ -4,10 +4,11 @@ import web
 urls = (
     '/', 'mvc.controllers.lista_productos.Lista',
     '/insertar', 'mvc.controllers.insertar_productos.Insertar',
-    '/detalle', 'mvc.controllers.detalles_productos.Detalle',
-    '/borrar', 'mvc.controllers.borrar_productos.Borrar',
-    '/actualizar', 'mvc.controllers.actualizar_productos.Actualizar',
-)
+    '/detalle/(\d+)', 'mvc.controllers.detalle_productos.Detalle',
+     r'/borrar_producto/(\d+)', 'mvc.controllers.borrar_productos.BorrarProducto',
+    r'/actualizar_producto/(\d+)', 'mvc.controllers.actualizar_productos.ActualizarProducto'
+)  # Actualizamos la URL para que coincida con el formulario en el HTML
+
 
 app = web.application(urls, globals())
 
