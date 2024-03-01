@@ -1,4 +1,4 @@
-id,nombre,descripcion,precio,existencia,
+id,nombre,descripcion,precio,existencia
 1,Laptop,"Laptop de ultima generacion",999.99,10
 2,Smartphone,"Smartphone con camara de alta resolucion",599.99,20
 3,Tablet,"Tablet ligera y portatil",299.99,15
