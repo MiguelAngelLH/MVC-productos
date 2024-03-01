@@ -1,31 +1,31 @@
-<!-- Archivo insertar_productos.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Insertar Producto</title>
-</head>
-<body>
-    <h1>Insertar Producto</h1>
-    <form method="post" action="/insertar">
-        <label for="nombre">Nombre del producto:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+$def with ()
 
-        <label for="descripcion">Descripción del producto:</label>
-        <textarea id="descripcion" name="descripcion" required></textarea><br><br>
+<h1>Producto a Insertar</h1>
+<form method="post">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
 
-        <label for="precio">Precio del producto:</label>
-        <input type="number" id="precio" name="precio" required><br><br>
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripción:</label>
+        <textarea class="form-control" id="descripcion" name="descripcion" required></textarea>
+    </div>
 
-        <label for="existencia">Existencia del producto:</label>
-        <input type="number" id="existencia" name="existencia" required><br><br>
+    <div class="mb-3">
+        <label for="precio" class="form-label">Precio:</label>
+        <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+    </div>
 
-        <input type="submit" value="Insertar">
-    </form>
+    <div class="mb-3">
+        <label for="existencias" class="form-label">Existencias:</label>
+        <input type="number" class="form-control" id="existencias" name="existencias" min="0" required>
+    </div>
 
-    <br>
+    <button class="btn btn-primary" type="submit">Insertar Producto</button>
+</form>
+<div class="field has-addons has-addons-centered">
     <a href="/">
-        <img src="https://w7.pngwing.com/pngs/126/462/png-transparent-regresar-superintendencia-de-sociedades-information-web-miscellaneous-blue-angle.png" alt="Botón de imagen" style="width: 30px; height: 30px;">
+        <img class="button is-danger is-outlined" src="data:image/png;base64,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"  style="width: 50px; height: 50px;" alt="Cancelar">
     </a>
-    </br>
-</body>
-</html>
+</div>

@@ -1,13 +1,12 @@
-import csv
-from web import template
+import web
+from mvc.models.modelo_productos import Producto
 
-class Lista:
+render = web.template.render('mvc/views/', base='layout')
+
+class MostrarListaProductos:
     def GET(self):
-        productos = []
-        with open('productos.csv', 'r', encoding='utf-8') as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                productos.append(row)
+        # Lógica para leer productos desde el archivo CSV
+        productos = Producto.cargar_productos_desde_csv("productos.csv")
         
-        render = template.render('mvc/views/')  
-        return render.lista_productos(productos)
+        # Renderizar la lista de productos utilizando el archivo HTML
+        return render.lista_productos(productos=productos)
